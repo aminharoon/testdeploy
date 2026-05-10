@@ -10,6 +10,8 @@ app.use("/api", testRoute)
 
 app.use(express.static("../public/index.html"))
 
+console.log()
+
 app.get("*name", (req, res) => {
-    res.sendFile(path.join(__dirname, "public", "index.html"))
+    res.sendFile(path.join(__dirname, "./public/index.html"))
 })
