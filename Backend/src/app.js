@@ -7,3 +7,9 @@ const __dirname = path.resolve()
 app.use(express.json())
 
 app.use("/api", testRoute)
+
+app.use(express.static("../public/index.html"))
+
+app.get("*name", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "index.html"))
+})
