@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "This is the test app for trying to deploy the web application",
+  "keywords": [
+    "lala"
+  ],
+  "homepage": "https://github.com/aminharoon/testdeploy#readme",
+  "bugs": {
+    "url": "https://github.com/aminharoon/testdeploy/issues"
+  },
+  "license": "ISC",
+  "author": "Haroon Amin",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run dev",
+    "dev": "npx nodemon server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
