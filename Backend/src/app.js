@@ -8,10 +8,10 @@ app.use(express.json())
 
 app.use("/api", testRoute)
 
-app.use(express.static("../public/index.html"))
+// Serve static files from the public directory (expects frontend build in Backend/public)
+app.use(express.static(path.join(__dirname, "public")))
 
-console.log()
-
+// For any other route, return the frontend's index.html
 app.get("*name", (req, res) => {
-    res.sendFile(path.join(__dirname, "./public/index.html"))
+    res.sendFile(path.join(__dirname, "public", "index.html"))
 })
